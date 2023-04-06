@@ -14,6 +14,8 @@ from django.http import HttpResponse, HttpResponseNotFound
 # Dynamic View (request, variable_name) => HttpResponse
 # A callback that expects two arguements request && month | where month is the variable name expected in urls.py <month>
 
+def monthlyChallengesInt(request, month):
+    return HttpResponse(month)
 
 def monthlyChallenges(request, month):
     content = _returnVal(month)
